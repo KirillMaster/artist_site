@@ -9,8 +9,8 @@ import TestimonialCard from '../components/TestimonialCard';
 
 export async function getServerSideProps() {
     try {
-        const aboutResponse = await axios.get(`${process.env.API_URL}/api/about`);
-        const testimonialsResponse = await axios.get(`${process.env.API_URL}/api/testimonials`);
+        const aboutResponse = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/about`);
+        const testimonialsResponse = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/testimonials`);
         console.log('Fetched aboutInfo for LandingPage:', aboutResponse.data);
         return {
             props: {

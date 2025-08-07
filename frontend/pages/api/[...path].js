@@ -1,6 +1,6 @@
 import httpProxy from 'http-proxy';
 
-const API_URL = process.env.API_URL || 'http://backend:8080';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://backend:8080';
 const proxy = httpProxy.createProxyServer();
 
 export const config = {

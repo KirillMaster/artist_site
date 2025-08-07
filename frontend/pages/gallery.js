@@ -7,9 +7,8 @@ import Head from 'next/head';
 
 export async function getServerSideProps() {
     try {
-        const paintingsResponse = await axios.get(`${process.env.API_URL}/api/paintings`);
-        console.log('Paintings data from API:', paintingsResponse.data);
-        const groupOrderResponse = await axios.get(`${process.env.API_URL}/api/grouporder`);
+        const paintingsResponse = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/paintings`);
+        const groupOrderResponse = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/grouporder`);
 
         let orderedGroupKeys = [];
         if (groupOrderResponse.data && groupOrderResponse.data.orderedGroupKeys) {

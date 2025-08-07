@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 export async function getServerSideProps() {
     try {
-        const response = await axios.get(`${process.env.API_URL}/api/videos`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/videos`);
         return {
             props: {
                 videos: response.data.map(v => ({

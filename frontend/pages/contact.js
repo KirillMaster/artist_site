@@ -7,7 +7,7 @@ import { faInstagram, faVk, faYoutube, faTelegram } from '@fortawesome/free-bran
 
 export async function getServerSideProps() {
     try {
-        const response = await axios.get(`${process.env.API_URL}/api/contact`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`);
         return {
             props: {
                 contactInfo: response.data,

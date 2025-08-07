@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export async function getServerSideProps() {
     try {
-        const response = await axios.get(`${process.env.API_URL}/api/about`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/about`);
         return {
             props: {
                 aboutInfo: response.data,
