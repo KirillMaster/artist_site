@@ -1,0 +1,209 @@
+body {
+    background-color: #FDF8F0; /* Кремовый белый */
+    color: #4A3732; /* Глубокий сливовый/коричневый для текста */
+}
+
+.App {
+    font-family: 'Lora', serif; /* Elegant serif for headings/titles */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Another elegant serif for headings */
+    color: #CB6D51; /* Терракотовый для заголовков */
+}
+
+p, a, li, button {
+    font-family: 'Open Sans', sans-serif; /* Clean sans-serif for body text */
+}
+
+/* Modern Header Style */
+.navbar {
+    background-color: #F8E7D8 !important; /* Мягкий персиковый для навигационной панели */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легкая тень для современного вида */
+    padding: 1rem 0; /* Увеличенный отступ */
+}
+
+.navbar-brand {
+    color: #4A3732 !important; /* Темный текст для бренда */
+    font-family: 'Playfair Display', serif; /* Стильный шрифт для бренда */
+    font-size: 1.8rem; /* Увеличенный размер шрифта */
+    font-weight: bold;
+}
+
+.artist-name {
+    font-family: 'Lora', serif; /* Красивый шрифт для имени художника */
+    font-size: 2.2rem; /* Увеличенный размер шрифта для имени */
+    font-weight: normal; /* Обычный вес шрифта */
+    color: #CB6D51 !important; /* Терракотовый цвет для имени */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Легкая тень */
+}
+
+.nav-link {
+    color: #4A3732 !important; /* Темный текст для ссылок */
+    font-size: 1.1rem; /* Немного увеличенный размер шрифта */
+    margin: 0 10px; /* Отступы между ссылками */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.nav-link:hover {
+    color: #D4AF37 !important; /* Приглушенное золото при наведении */
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #FDF8F0; /* Кремовый белый для карточек */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Slightly larger images */
+    object-fit: cover;
+    border-bottom: 1px solid #F8E7D8; /* Мягкий персиковый для границы */
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.placeholder-card {
+    background-color: #F8E7D8;
+    border: 1px dashed #CB6D51;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* Match card height */
+    color: #4A3732;
+    text-align: center;
+}
+
+.placeholder-card h5 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.placeholder-card p {
+    font-size: 0.85rem;
+}
+
+/* Landing Page Styles */
+.landing-page {
+    min-height: calc(100vh - 56px); /* Full height minus navbar */
+    background: linear-gradient(135deg, #FDF8F0 0%, #F8E7D8 100%); /* Теплый градиентный фон */
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Удален фоновый рисунок, используем только градиент */
+    opacity: 0.8; /* Более выраженный фон */
+}
+
+.landing-page h1, .landing-page p, .landing-page .btn {
+    position: relative;
+    z-index: 1;
+    color: #4A3732; /* Темный текст для контраста */
+}
+
+.landing-page h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-out;
+}
+
+.landing-page p {
+    font-size: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.landing-page .btn {
+    animation: zoomIn 1s ease-out 1s forwards;
+    opacity: 0;
+    background-color: #CB6D51; /* Терракотовая кнопка */
+    border-color: #CB6D51;
+    color: #FDF8F0 !important; /* Светлый текст кнопки */
+}
+
+.landing-page .btn:hover {
+    background-color: #D4AF37; /* Приглушенное золото при наведении */
+    border-color: #D4AF37;
+}
+
+@keyframes backgroundPan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.footer {
+    background-color: #F8E7D8; /* Мягкий персиковый */
+    color: #4A3732; /* Глубокий сливовый/коричневый */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #CB6D51; /* Терракотовая граница */
+}
+
+.footer h5 {
+    color: #CB6D51; /* Терракотовый для заголовков футера */
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li a {
+    color: #4A3732; /* Темный текст для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #D4AF37; /* Приглушенное золото при наведении */
+}
+
+.footer hr {
+    border-top: 1px solid #D4AF37; /* Приглушенное золото для разделителя */
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}

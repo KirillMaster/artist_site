@@ -1,0 +1,9 @@
+# Gemini CLI cache
+.channels_cache_v2.json
+.users_cache.json
+
+# Docker
+*.env
+.dockerignore
+docker-compose.override.yml
+*.log
