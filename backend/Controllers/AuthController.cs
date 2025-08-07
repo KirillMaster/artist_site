@@ -20,7 +20,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginModel model)
     {
-        if (model.Username == "admin" && model.Password == "admin")
+        if (model.Username == Environment.GetEnvironmentVariable("ADMIN_USERNAME") && model.Password == Environment.GetEnvironmentVariable("ADMIN_PASSWORD"))
         {
             var issuer = _configuration["Jwt:Issuer"];
             var audience = _configuration["Jwt:Audience"];
